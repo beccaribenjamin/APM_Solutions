@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #00509D;
+    --secondary-color: #FFDB57;
+    --success-color: #11296B;
+    --danger-color: #d4d4d4;
+    --warning-color: #FFCB05;
+    --info-color: #EDEDED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--danger-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mine-header {
+    background-color: var(--primary-color);
+    padding: 20px 40px 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.card-content {
+    background-color: var(--warning-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+}
