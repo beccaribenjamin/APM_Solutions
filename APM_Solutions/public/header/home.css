@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--danger-color);
+    background-color: var(--info-color);
 }
 
 .mine-header {
@@ -63,22 +63,49 @@ body {
 
 }
 
-.card {
+.card-blue {
     text-align: center;
     background-color: var(--primary-color);
     width: 30%;
-    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
-.card-blue {
+.card {
     background-color: var(--warning-color);
     text-align: center;
     width: 30%;
-    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
 .main-containers h3 {
     color: var(--black-color);
-    text-decoration: underline;
+    font-weight: bold;
     margin-bottom: 10px;
+}
+
+.card h3 {
+   background-color: gray;
+   padding: 10px;
+   border-radius: 0px 20px 0px 20px;
+   padding: 15px 0;
+}
+.card p {
+    color: var(--black-color);
+    text-align: left;
+    font-weight: 500;
+    margin: 10px;
+}
+.card-blue h3 {
+   background-color: var(--success-color);
+   padding: 10px;
+   border-radius: 0px 20px 0px 20px;
+   padding: 15px 0;
+}
+.card-blue p {
+    color: var(--black-color);
+    text-align: center;
+    font-weight: 500;
+    
 }
