@@ -3,9 +3,14 @@
     --secondary-color: #FFDB57;
     --success-color: #11296B;
     --danger-color: #d4d4d4;
+<<<<<<< HEAD
     --warning-color: #E2E8F0;
     --info-color: #EDEDED;
     --black-color: black;
+=======
+    --warning-color: #FFCB05;
+    --info-color: #EDEDED;
+>>>>>>> d97b74defbf842c3c349e8b256214a11afecd8fc
 }
 
 * {
@@ -16,11 +21,19 @@
 }
 
 body {
+<<<<<<< HEAD
     background-color: var(--info-color);
+=======
+    background-color: var(--danger-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+>>>>>>> d97b74defbf842c3c349e8b256214a11afecd8fc
 }
 
 .mine-header {
     background-color: var(--primary-color);
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,4 +120,26 @@ body {
     text-align: center;
     font-weight: 500;
     
+=======
+    padding: 20px 40px 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.card-content {
+    background-color: var(--warning-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+>>>>>>> d97b74defbf842c3c349e8b256214a11afecd8fc
 }
