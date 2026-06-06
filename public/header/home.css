@@ -1,3 +1,6 @@
+/***** Principal *****/ 
+
+
 :root {
     --primary-color: #00509D;
     --secondary-color: #FFDB57;
@@ -6,6 +9,7 @@
     --warning-color: #E2E8F0;
     --info-color: #EDEDED;
     --black-color: black;
+    --darkyellow-color: #FFB703;
 }
 
 * {
@@ -14,13 +18,19 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
-
+html {
+scroll-behavior: smooth;
+}
 body {
     background-color: var(--danger-color);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
+/***** End Principal *****/
+
+/***** HEADER *****/ 
 
 .mine-header {
     background-color: var(--primary-color);
@@ -53,18 +63,23 @@ body {
     font-weight: 600;
 }
 
+/***** End HEADER *****/
+/***** Banner *****/ 
+
 .banner {
   width: 100%;
   height: auto;
   display: block;    
 }
 
-.main-containers {
+/***** End Banner *****/
+/***** Home *****/ 
+
+.Home {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px;
-
 }
 
 .card-blue {
@@ -83,7 +98,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
-.main-containers h3 {
+.Home h3 {
     color: var(--black-color);
     font-weight: bold;
     margin-bottom: 10px;
@@ -94,6 +109,7 @@ body {
    padding: 10px;
    border-radius: 0px 20px 0px 20px;
    padding: 15px 0;
+   font-size: 25px;
 }
 .card p {
     color: var(--black-color);
@@ -106,6 +122,7 @@ body {
    padding: 10px;
    border-radius: 0px 20px 0px 20px;
    padding: 15px 0;
+   font-size: 25px;
 }
 .card-blue p {
     color: var(--black-color);
@@ -127,10 +144,273 @@ body {
     border-radius: 25px;
 }
 
-.end {    
+/***** End Home *****/
+
+/***** Servicios *****/
+
+.servicios h1 {
+
+padding: 20px;
+margin-left: 20px;
+font-size: 50px;
+color: #11296B;
+text-decoration: underline;
+
+}
+
+.servicios {
+    width: 100%;
+}
+
+.servicios-contenedor {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+.servicio-texto {
+    width: 50%;
+}
+
+.servicio-imagen {
+    width: 50%;
+}
+
+.foto2 {
+    margin-top: 20px;
+}
+
+.servicio-imagen img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.servicio-manipulacion h2 {
+
+padding: 20px 0px 5px 20px;
+font-size: 30px;
+background-color: #2f59cf;
+margin-left: 20px;
+border-radius: 20px 0px 0px 0px;
+
+}
+
+.servicio-manipulacion p {
+
+padding: 20px 0px 20px 20px;
+font-weight: 500;
+background-color: #EDEDED;
+margin-left: 20px;
+border-radius: 0px 0px 20px 0px;
+padding-right: 20px;
+
+}
+
+
+.servicio-carga {
+    padding-top: 30px;
+}
+
+.servicio-carga h2 {
+
+padding: 20px 0px 5px 20px;
+font-size: 30px;
+background-color: #2f59cf;
+margin-left: 20px;
+border-radius: 20px 0px 0px 0px;
+
+}
+
+.servicio-carga p {
+
+padding: 20px 0px 20px 20px;
+font-weight: 500;
+background-color: #EDEDED;
+margin-left: 20px;
+border-radius: 0px 0px 20px 0px;
+padding-right: 20px;
+
+}
+
+.servicio-distribucion {
+    padding-top: 30px;
+}
+
+.servicio-distribucion h2 {
+
+padding: 20px 0px 5px 20px;
+font-size: 30px;
+background-color: #2f59cf;
+margin-left: 20px;
+border-radius: 20px 0px 0px 0px;
+
+}
+
+.servicio-distribucion p {
+
+padding: 20px 0px 20px 20px;
+font-weight: 500;
+background-color: #EDEDED;
+margin-left: 20px;
+border-radius: 0px 0px 20px 0px;
+padding-right: 20px;
+
+}
+
+.servicio-express {
+    padding-top: 30px;
+}
+
+.servicio-express h2 {
+
+padding: 20px 0px 5px 20px;
+font-size: 30px;
+background-color: #2f59cf;
+margin-left: 20px;
+border-radius: 20px 0px 0px 0px;
+
+}
+
+.servicio-express p {
+
+padding: 20px 0px 20px 20px;
+font-weight: 500;
+background-color: #EDEDED;
+margin-left: 20px;
+border-radius: 0px 0px 20px 0px;
+padding-right: 20px;
+
+}
+
+/***** End Servicios *****/
+
+/***** ABOUT US *****/  
+
+.about_us {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.about_us_contenedor {
+    display: flex;
+    gap: 40px;
+}
+
+
+.about_us_imagen {
+    width: 50%;
+}
+
+.about_us_imagen img {
+    width: 100%;
+    margin-left: 20px;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.about_us_text {
+    width: 50%;
+}
+
+.about_us_text h1 {
+    font-size: 20px;
+    color: #11296B;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.about_us_text h2 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.about_us_text p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+    line-height: 1.5;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.about_us_text h3 {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/***** End ABOUT US *****/
+
+/***** Contactenos *****/
+
+.contactenos {
+    margin-top: 30px;
+}
+
+.contact-text {
+    padding: 15px 40px;
+    background-color: #183b9c;
+}
+
+.contact-text p {
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+}
+
+.contact-info {
     background-color: var(--primary-color);
+    padding: 20px 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contact-item svg,
+.contact-item i {
+    width: 24px;
+    height: 24px;
+    color: rgb(2, 2, 2);
+    flex-shrink: 0;
+}
+
+.contact-item p {
+    font-weight: 620;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/***** End Contactenos *****/
+
+
+
+
+/***** Copyright *****/ 
+.copyright {    
+    background-color: var(--black-color);
     display: flex;
     text-align: left;
     border-top: 5px solid var(--black-color);
-    ;
 }
+
+.copyright p {
+     color:#E2E8F0
+}
+
+/***** End Copyright *****/
