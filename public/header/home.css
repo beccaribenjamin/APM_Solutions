@@ -1,4 +1,7 @@
-/***** Principal *****/ 
+
+/***** Principal *****/
+
+
 
 
 :root {
@@ -11,6 +14,7 @@
     --black-color: black;
     --darkyellow-color: #FFB703;
 }
+
 
 * {
     margin: 0;
@@ -28,9 +32,12 @@ body {
     flex-direction: column;
 }
 
+
 /***** End Principal *****/
 
-/***** HEADER *****/ 
+
+/***** HEADER *****/
+
 
 .mine-header {
     background-color: var(--primary-color);
@@ -40,31 +47,61 @@ body {
     border-bottom: 5px solid var(--black-color);
     padding: 2px 40px;
     -webkit-text-fill-color: #EDEDED;
-    
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px rgba(0, 0, 0, 0.15);
+   
 }
 .logo{
     width: 15%;
 }
 
-.logo img{
+
+.logo img {
     width: 80px;
 }
+
 
 .nav-links {
    justify-items:flex-end;
    width: 85%;
     display: flex;
-    gap:120px;
+    gap:40px;
+    align-items: center;
 }
+
 
 .nav-links a {
-    color:var(--black-color);
     text-decoration: none;
     font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: 1px solid transparent;
 }
 
+
+
+
+.nav-links a:hover {
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4)
+}
+
+
 /***** End HEADER *****/
-/***** Banner *****/ 
+/***** Banner *****/
+
 
 .banner {
   width: 100%;
@@ -72,8 +109,10 @@ body {
   display: block;    
 }
 
+
 /***** End Banner *****/
-/***** Home *****/ 
+/***** Home *****/
+
 
 .Home {
     display: flex;
@@ -81,6 +120,7 @@ body {
     justify-content: space-between;
     margin: 20px;
 }
+
 
 .card-blue {
     text-align: center;
@@ -90,6 +130,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
+
 .card {
     background-color: var(--warning-color);
     text-align: center;
@@ -98,11 +139,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
+
 .Home h3 {
     color: var(--black-color);
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 
 .card h3 {
    background-color: gray;
@@ -130,6 +173,7 @@ body {
     font-weight: 500;
 }
 
+
 .card-content {
     background-color: var(--warning-color);
     border-radius: 10px;
@@ -144,11 +188,15 @@ body {
     border-radius: 25px;
 }
 
+
 /***** End Home *****/
+
 
 /***** Servicios *****/
 
+
 .servicios h1 {
+
 
 padding: 20px;
 margin-left: 20px;
@@ -156,11 +204,14 @@ font-size: 50px;
 color: #11296B;
 text-decoration: underline;
 
+
 }
+
 
 .servicios {
     width: 100%;
 }
+
 
 .servicios-contenedor {
     display: flex;
@@ -170,17 +221,21 @@ text-decoration: underline;
     align-items: flex-start;
 }
 
+
 .servicio-texto {
     width: 50%;
 }
+
 
 .servicio-imagen {
     width: 50%;
 }
 
+
 .foto2 {
     margin-top: 20px;
 }
+
 
 .servicio-imagen img {
     width: 100%;
@@ -192,7 +247,9 @@ text-decoration: underline;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+
 .servicio-manipulacion h2 {
+
 
 padding: 20px 0px 5px 20px;
 font-size: 30px;
@@ -200,9 +257,12 @@ background-color: #2f59cf;
 margin-left: 20px;
 border-radius: 20px 0px 0px 0px;
 
+
 }
 
+
 .servicio-manipulacion p {
+
 
 padding: 20px 0px 20px 20px;
 font-weight: 500;
@@ -211,14 +271,19 @@ margin-left: 20px;
 border-radius: 0px 0px 20px 0px;
 padding-right: 20px;
 
+
 }
+
+
 
 
 .servicio-carga {
     padding-top: 30px;
 }
 
+
 .servicio-carga h2 {
+
 
 padding: 20px 0px 5px 20px;
 font-size: 30px;
@@ -226,9 +291,12 @@ background-color: #2f59cf;
 margin-left: 20px;
 border-radius: 20px 0px 0px 0px;
 
+
 }
 
+
 .servicio-carga p {
+
 
 padding: 20px 0px 20px 20px;
 font-weight: 500;
@@ -237,13 +305,17 @@ margin-left: 20px;
 border-radius: 0px 0px 20px 0px;
 padding-right: 20px;
 
+
 }
+
 
 .servicio-distribucion {
     padding-top: 30px;
 }
 
+
 .servicio-distribucion h2 {
+
 
 padding: 20px 0px 5px 20px;
 font-size: 30px;
@@ -251,9 +323,12 @@ background-color: #2f59cf;
 margin-left: 20px;
 border-radius: 20px 0px 0px 0px;
 
+
 }
 
+
 .servicio-distribucion p {
+
 
 padding: 20px 0px 20px 20px;
 font-weight: 500;
@@ -262,13 +337,17 @@ margin-left: 20px;
 border-radius: 0px 0px 20px 0px;
 padding-right: 20px;
 
+
 }
+
 
 .servicio-express {
     padding-top: 30px;
 }
 
+
 .servicio-express h2 {
+
 
 padding: 20px 0px 5px 20px;
 font-size: 30px;
@@ -276,9 +355,12 @@ background-color: #2f59cf;
 margin-left: 20px;
 border-radius: 20px 0px 0px 0px;
 
+
 }
 
+
 .servicio-express p {
+
 
 padding: 20px 0px 20px 20px;
 font-weight: 500;
@@ -287,16 +369,21 @@ margin-left: 20px;
 border-radius: 0px 0px 20px 0px;
 padding-right: 20px;
 
+
 }
+
 
 /***** End Servicios *****/
 
+
 /***** ABOUT US *****/  
+
 
 .about_us {
     width: 100%;
     padding: 40px 20px;
 }
+
 
 .about_us_contenedor {
     display: flex;
@@ -304,9 +391,12 @@ padding-right: 20px;
 }
 
 
+
+
 .about_us_imagen {
     width: 50%;
 }
+
 
 .about_us_imagen img {
     width: 100%;
@@ -319,22 +409,26 @@ padding-right: 20px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+
 .about_us_text {
     width: 50%;
 }
 
+
 .about_us_text h1 {
-    font-size: 20px;
+    font-size: 32px;
     color: #11296B;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
+
 
 .about_us_text h2 {
     font-size: 30px;
     color: black;
     margin-bottom: 15px;
 }
+
 
 .about_us_text p {
     margin-top: 10px;
@@ -345,29 +439,36 @@ padding-right: 20px;
     text-decoration: none;
 }
 
+
 .about_us_text h3 {
     text-decoration: underline;
     margin-top: 10px;
 }
 
+
 /***** End ABOUT US *****/
 
+
 /***** Contactenos *****/
+
 
 .contactenos {
     margin-top: 30px;
 }
 
+
 .contact-text {
     padding: 15px 40px;
-    background-color: #183b9c;
+    background-color: #0d47a1;
+    font-family: Inter, sans-serif;
+    color: var(--success-color);
 }
 
-.contact-text p {
+
+    .contact-text p {
     font-weight: 800;
     font-size: 20px;
     color: black;
-    text-decoration: underline;
 }
 
 .contact-info {
@@ -375,20 +476,24 @@ padding-right: 20px;
     padding: 20px 40px;
 }
 
+
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 15px;
+    margin-bottom: 16px;
+    background-color: var(--primary-color);
 }
+
 
 .contact-item svg,
 .contact-item i {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     color: rgb(2, 2, 2);
     flex-shrink: 0;
 }
+
 
 .contact-item p {
     font-weight: 620;
@@ -396,12 +501,10 @@ padding-right: 20px;
     color: rgb(0, 0, 0);
 }
 
+
 /***** End Contactenos *****/
 
-
-
-
-/***** Copyright *****/ 
+/***** Copyright *****/
 .copyright {    
     background-color: var(--black-color);
     display: flex;
@@ -409,8 +512,10 @@ padding-right: 20px;
     border-top: 5px solid var(--black-color);
 }
 
+
 .copyright p {
      color:#E2E8F0
 }
+
 
 /***** End Copyright *****/
