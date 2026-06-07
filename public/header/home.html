@@ -10,40 +10,45 @@
 </head>
 
 
-<body>
-    <header class="mine-header" id="home">
-        <div class="logo">
-            <img src="../header/imagenes/logoAPMBLUE.PNG" class="logo">
+    <body>
+        <header class="mine-header" id="home">
+            <div class="logo">
+                <img src="../header/imagenes/logoAPMBLUE.PNG" class="logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#services">Servicios</a>
+                <a href="#aboutus">Sobre Nosotros</a>
+                <a href="#contact">Contactanos</a>
+                <a href="#procedimiento">Procedimiento</a>
+            </nav>
+        </header>
+        <div class="banner">
+            <img src="../header/imagenes/fondo0.jpeg" class="banner">
         </div>
-        <nav class="nav-links">
-            <a href="#home">Inicio</a>
-            <a href="#services">Servicios</a>
-            <a href="#aboutus">Sobre Nosotros</a>
-            <a href="#contact">Contactanos</a>
-            <a href="#procedimiento">Procedimiento</a>
-        </nav>
-    </header>
-    <div class="banner">
-        <img src="../header/imagenes/fondo0.jpeg" class="banner">
-    </div>
-    <main class="Home" id="home">
-        <div class="card card-proyect">
-            <h3>Proyecto</h3>
-            <p> APM Solutions surge de la necesidad de desarrollar una grúa mediante microcontroladores y de la
-                posibilidad de automatizar tareas relacionadas con la manipulación de cargas y el transporte preciso de
-                objetos. </p>
-            <p> De esta manera, APM Solutions permite simular aplicaciones industriales reales a escala, como las
-                utilizadas en logística, almacenes y construcción.</p>
-        </div>
-        <div class="card-blue card-grua3d" id="card-blue card-grua3d">
-            <H3>Nuestra Grua</H3>
-            <p>Este es un modelo 3d de nuestra grúa.</p>
-        </div>
+        <main class="Home" id="inicio">
+            <div class="card card-proyect">
+                <h3>Proyecto</h3>
+                <p> APM Solutions surge de la necesidad de desarrollar una grúa mediante microcontroladores y de la posibilidad de automatizar tareas relacionadas con la manipulación de cargas y el transporte preciso de objetos. </p>
+                <p> De esta manera, APM Solutions permite simular aplicaciones industriales reales a escala, como las
+                    utilizadas en logística, almacenes y construcción.</p>
+            </div>
+        <script type="module" src="../header/grua.glb"></script>
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+<div class="card-blue card-grua3d" id="card-grua3d">
+    <h3>Nuestra Grua</h3>
+    
+    <model-viewer 
+        src="./grua.glb" 
+        camera-controls 
+        alt="Modelo grua 3D APM" 
+        style="width: 100%; height: 300px;">       
+    </model-viewer>
+</div>
         <div class="card card-objetivo" id="card card-objetivo">
             <h3>Objetivo</h3>
-            <p>El objetivo de APM Solutions es demostrar la integración entre la mecanica, la electronica y la
-                programación mediante el desarollo de un sistema capaz de controlar movimientos de precisión de forma
-                remota o autonoma </p>
+            <p>El objetivo de APM Solutions es demostrar la integración entre la mecánica, la electrónica y la programación mediante el desarrollo de un sistema capaz de controlar movimientos de precisión de forma remota o autónoma</p>
         </div>
     </main>
     <main class="servicios" id="services">
