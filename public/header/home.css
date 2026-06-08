@@ -150,7 +150,7 @@ model-viewer {
     height: 100%;
     background-color: transparent;
     outline: none;
-    cusor: grab;
+    cursor: grab;
 }
 model-viewer:active {
     cursor: grabbing;
