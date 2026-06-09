@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-
 <body>
     <header class="mine-header" id="home">
       <div class="logo">
@@ -30,36 +29,50 @@
         </button>
     </header>
     <div class="banner">
-        <img src="public/header/imagenes/fondo0.png" class="banner">
+        <img src="public/header/imagenes/fondo0.png" class="banner" alt="Banner APM">
     </div>
-    <main class="Home" id="inicio">
+<main class="Home" id="inicio">
         <div class="card card-proyect">
             <h3>Proyecto</h3>
-            <p> APM Solutions surge de la necesidad de desarrollar una grúa mediante microcontroladores y de la
-                posibilidad de automatizar tareas relacionadas con la manipulación de cargas y el transporte preciso de
-                objetos. </p>
-            <p> De esta manera, APM Solutions permite simular aplicaciones industriales reales a escala, como las
-                utilizadas en logística, almacenes y construcción.</p>
+            <div class="contenido-desplegable">
+                <div class="inner-content">
+                    <p> APM Solutions surge de la necesidad de desarrollar una grúa mediante microcontroladores y de la
+                        posibilidad de automatizar tareas relacionadas con la manipulación de cargas y el transporte preciso de
+                        objetos. </p>
+                    <p> De esta manera, APM Solutions permite simular aplicaciones industriales reales a escala, como las
+                        utilizadas en logística, almacenes y construcción.</p>
+                </div>
+            </div>
         </div>
-        <script type="module" src="./public/header/grua.glb"></script>
+
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        
         <div class="card-blue card-grua3d" id="card-grua3d">
             <h3>Nuestra Grua</h3>
-            <model-viewer src="/public/header/grua.glb"
-                camera-controls
-                auto-rotate
-                auto-rotate-delay="0"
-                rotation-per-second="30deg"
-                interaction-prompt="none"
-                alt="Modelo grua 3D APM"
-                style="width: 100%; height: 300px;">
-            </model-viewer>
+            <div class="contenido-desplegable">
+                <div class="inner-content">
+                    <model-viewer src="/public/header/grua.glb"
+                        camera-controls
+                        auto-rotate
+                        auto-rotate-delay="0"
+                        rotation-per-second="30deg"
+                        interaction-prompt="none"
+                        alt="Modelo grua 3D APM"
+                        style="width: 100%; height: 300px;">
+                    </model-viewer>
+                </div>
+            </div>
         </div>
-        <div class="card card-objetivo" id="card card-objetivo">
+
+        <div class="card card-objetivo" id="card-objetivo">
             <h3>Objetivo</h3>
-            <p>El objetivo de APM Solutions es demostrar la integración entre la mecánica, la electrónica y la
-                programación mediante el desarrollo de un sistema capaz de controlar movimientos de precisión de forma
-                remota o autónoma</p>
+            <div class="contenido-desplegable">
+                <div class="inner-content">
+                    <p>El objetivo de APM Solutions es demostrar la integración entre la mecánica, la electrónica y la
+                        programación mediante el desarrollo de un sistema capaz de controlar movimientos de precisión de forma
+                        remota o autónoma</p>
+                </div>
+            </div>
         </div>
     </main>
     <main class="servicios" id="services">
@@ -97,7 +110,7 @@
     <main class="about_us" id="aboutus">
         <section class="about_us_contenedor">
             <div class="about_us_imagen">
-                <img src="public/header/imagenes/imbecil.PNG" alt="nosotros" class="about_us_imagen_grupal">
+                <img src="public/header/imagenes/nosotros.jpeg" alt="nosotros" class="about_us_imagen_grupal">
             </div>
             <div class="about_us_text">
                 <h1> Sobre Nosotros</h1>
@@ -131,12 +144,10 @@
                     <p>+54 9 261 653 6567</p>
                 </div>
 
-
                 <div class="contact-item">
                     <i data-lucide="mail"></i>
                     <p>ApmSolutions@gmail.com</p>
                 </div>
-
 
                 <div class="contact-item">
                     <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" fill="currentColor"
@@ -156,10 +167,8 @@
                 </div>
             </div>
 
-
         </section>
     </main>
-
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -170,8 +179,7 @@
     <p>Copyright © 2026 APM Solutions. Todos los derechos reservados.</p>
     </div>
 
+    <script src="main.js"></script>
+
 </body>
-
-<script src="main.js"></script>
-
 </html>

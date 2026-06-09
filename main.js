@@ -1,21 +1,19 @@
-// 1. Select the HTML target element
-const button = document.querySelector('.menu-boton');
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBoton = document.getElementById("menu-boton");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links a");
 
-// Mover la variable FUERA de la función para que no se reinicie
-let veces = 0;
+    // Abrir y cerrar el menú Celular
+    menuBoton.addEventListener("click", () => {
+        navLinks.classList.toggle("mostrar-menu");
+    });
 
-// 2. Define the callback logic
-function handleClick(event) {
-  // Sumar 1 en cada clic
-  veces++; 
-  
-  console.log('Tocaste el boton!', event.target);
-
-  // Ahora sí va a superar el 3
-  if (veces > 3) {
-    console.log('Deja de joder, comilon', event.target);
-  }
-}
-
-// 3. Attach the event listener
-button.addEventListener('click', handleClick);
+    // Cerrar el menú automáticamente
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            if (navLinks.classList.contains("mostrar-menu")) {
+                navLinks.classList.remove("mostrar-menu");
+            }
+        });
+    });
+});
