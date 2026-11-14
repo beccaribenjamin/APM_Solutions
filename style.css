@@ -1,50 +1,66 @@
 /***** Principal *****/
+
 :root {
     --primary-color: #00509D;
-    --primary-dark: #00376d;
-    --secondary-color: #FFB703;
-    --bg-color: #F8FAFC; /* Gris muy claro para fondo */
-    --surface-color: #FFFFFF; /* Blanco para tarjetas */
-    --text-main: #1E293B; /* Texto oscuro suave */
-    --text-muted: #475569;
+    --secondary-color: #FFDB57;
+    --success-color: #11296B;
+    --danger-color: #d4d4d4;
+    --warning-color: #E2E8F0;
+    --info-color: #EDEDED;
+    --black-color: black;
+    --darkyellow-color: #FFB703;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-#inicio, #services, #aboutus, #contact {
-    scroll-margin-top: 90px;
+#inicio,
+#services,
+#aboutus,
+#contact,
+#procedimiento {
+    scroll-margin-top: 80px;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    background-color: var(--danger-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/***** End Principal *****/
+
 /***** HEADER *****/
+
 .mine-header {
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    border-bottom: 5px solid var(--black-color);
+    padding: 2px 40px;
+    -webkit-text-fill-color: #EDEDED;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    width: 15%;
+    display: flex;
+    align-items: center;
 }
 
 .logo-img {
@@ -54,24 +70,11 @@ body {
 }
 
 .nav-links {
+    justify-items: flex-end;
+    width: 85%;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 6px;
-}
-
-.nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--secondary-color);
 }
 
 .menu-boton {
@@ -80,85 +83,65 @@ body {
     border: none;
     cursor: pointer;
     padding: 8px;
-    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4)
 }
 
 .menu-icon {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
+    color: #EDEDED; /* Ajustado para que se vea sobre el azul */
 }
+
+/***** End HEADER *****/
 
 /***** Banner *****/
+
 .banner {
     width: 100%;
-    height: 60vh;
-    min-height: 400px;
-    overflow: hidden;
-    background-color: var(--primary-dark);
+    height: auto;
+    display: block;
 }
 
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.9;
-}
+/***** End Banner *****/
 
-/***** Home / Tarjetas Desplegables *****/
+/***** Home *****/
+
 .Home {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 25px;
-    padding: 50px 5%;
+    margin: 20px;
+}
+
+.card-blue {
+    text-align: center;
+    background-color: black;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
 .card {
-    background-color: var(--surface-color);
+    background-color: var(--warning-color);
     text-align: center;
-    flex: 1;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e2e8f0;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px 0;
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.contenido-desplegable {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.4s ease-out;
-}
-
-.card:hover .contenido-desplegable {
-    grid-template-rows: 1fr;
-}
-
-.inner-content {
-    overflow: hidden;
-}
-
-.inner-content p {
-    color: var(--text-muted);
-    text-align: left;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 20px;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.301) 10px 10px 20px;
 }
 
 model-viewer {
@@ -173,230 +156,310 @@ model-viewer:active {
     cursor: grabbing;
 }
 
-/***** Servicios *****/
-.servicios {
-    padding: 50px 5%;
-    background-color: #ffffff;
-}
-
-.section-title h1 {
-    font-size: 40px;
-    color: var(--primary-color);
+.Home h3 {
+    color: var(--black-color);
+    font-weight: bold;
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
-.title-line {
-    width: 80px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin-bottom: 40px;
-    border-radius: 2px;
+.card h3 {
+    background-color: gray;
+    border-radius: 0px 20px 0px 20px;
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+.card p {
+    color: var(--black-color);
+    text-align: left;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.card-blue h3 {
+    background-color: var(--success-color);
+    border-radius: 0px 20px 0px 20px;
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+.card-blue p {
+    color: var(--black-color);
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-content {
+    background-color: var(--warning-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/***** End Home *****/
+
+/***** Servicios *****/
+
+.servicios h1 {
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+    color: #11296B;
+    text-decoration: underline;
+}
+
+.servicios {
+    width: 100%;
 }
 
 .servicios-contenedor {
     display: flex;
-    gap: 40px;
+    width: 100%;
+    gap: 20px;
+    padding: 0 20px;
     align-items: flex-start;
 }
 
 .servicio-texto {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card-service {
-    background: var(--bg-color);
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 5px solid var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-.card-service:hover {
-    transform: translateX(10px);
-}
-
-.card-service h2 {
-    font-size: 20px;
-    color: var(--primary-dark);
-    margin-bottom: 10px;
-}
-
-.card-service p {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.6;
 }
 
 .servicio-imagen {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+}
+
+.foto2 {
+    margin-top: 20px;
 }
 
 .servicio-imagen img {
     width: 100%;
-    height: 300px;
+    height: 360px;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    object-position: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+.servicio-manipulacion h2,
+.servicio-carga h2,
+.servicio-distribucion h2,
+.servicio-express h2 {
+    padding: 20px 0px 5px 20px;
+    font-size: 30px;
+    background-color: #2f59cf;
+    margin-left: 20px;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.servicio-manipulacion p,
+.servicio-carga p,
+.servicio-distribucion p,
+.servicio-express p {
+    padding: 20px 0px 20px 20px;
+    font-weight: 500;
+    background-color: #EDEDED;
+    margin-left: 20px;
+    border-radius: 0px 0px 20px 0px;
+    padding-right: 20px;
+}
+
+.servicio-carga,
+.servicio-distribucion,
+.servicio-express {
+    padding-top: 30px;
+}
+
+/***** End Servicios *****/
+
 /***** ABOUT US *****/
+
 .about_us {
-    padding: 70px 5%;
-    background-color: var(--bg-color);
+    width: 100%;
+    padding: 40px 20px;
 }
 
 .about_us_contenedor {
     display: flex;
-    gap: 50px;
-    align-items: center;
+    gap: 40px;
 }
 
 .about_us_imagen {
-    width: 45%;
+    width: 50%;
 }
 
 .about_us_imagen img {
     width: 100%;
-    height: 450px;
+    margin-left: 20px;
+    height: 360px;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    object-position: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .about_us_text {
-    width: 55%;
+    width: 50%;
 }
 
 .about_us_text h1 {
-    font-size: 36px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-size: 32px;
+    color: #11296B;
+    text-decoration: underline;
+    margin-bottom: 30px;
 }
 
 .about_us_text h2 {
-    font-size: 24px;
-    color: var(--text-main);
-    margin-bottom: 20px;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 15px;
 }
 
 .about_us_text p {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+    line-height: 1.5;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .about_us_text h3 {
-    font-size: 15px;
-    font-style: italic;
-    color: var(--primary-dark);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    border-left: 4px solid var(--secondary-color);
+    text-decoration: underline;
+    margin-top: 10px;
 }
+
+/***** End ABOUT US *****/
 
 /***** Contactenos *****/
-.contact {
-    background-color: var(--primary-color);
-    color: white;
-}
 
 .contactenos {
-    display: flex;
-    flex-direction: row;
-    padding: 60px 5%;
-    gap: 40px;
-    align-items: center;
+    margin-top: 30px;
 }
 
 .contact-text {
-    flex: 1;
-}
-
-.contact-text h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
+    padding: 15px 40px;
+    background-color: #0d47a1;
+    font-family: Inter, sans-serif;
+    color: var(--success-color);
 }
 
 .contact-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #e2e8f0;
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
 }
 
 .contact-info {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    background-color: #0d47a1;
+    padding: 20px 40px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px 20px;
-    border-radius: 12px;
-    transition: background-color 0.3s;
+    margin-bottom: 16px;
+    background-color: white;
+    padding: 10px 15px;
+    width: fit-content;
+    max-width: 100%;
+    border-radius: 15px;
 }
 
-.contact-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.contact-item svg, .contact-item i {
-    width: 24px;
-    height: 24px;
-    color: var(--secondary-color);
+.contact-item svg,
+.contact-item i {
+    width: 30px;
+    height: 30px;
+    color: rgb(2, 2, 2);
+    flex-shrink: 0;
 }
 
 .contact-item p {
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 620;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 }
 
+/***** End Contactenos *****/
+
 /***** Copyright *****/
+
 .copyright {
-    background-color: #001f3f;
-    text-align: center;
-    padding: 20px 5%;
+    background-color: var(--black-color);
+    display: flex;
+    text-align: left;
+    border-top: 5px solid var(--black-color);
+    padding: 10px 20px;
 }
 
 .copyright p {
-    color: #94a3b8;
-    font-size: 14px;
+    color: #E2E8F0
 }
 
+/***** End Copyright *****/
+
 /***** RESPONSIVE *****/
+
+img {
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* TABLET */
 @media (max-width: 900px) {
+    .mine-header {
+        flex-direction: row; /* Cambiado a row para que el logo y menú queden alineados */
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: left;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
     .nav-links {
-        display: none;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        display: none; /* Oculto por defecto en mobile */
+    }
+
+    /* CLASE INYECTADA PARA EL MENÚ JS */
+    .nav-links.mostrar-menu {
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 65px; 
         left: 0;
         width: 100%;
         background-color: var(--primary-color);
         padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        gap: 15px;
+        box-shadow: 0 4px rgba(0, 0, 0, 0.15);
     }
 
-    .nav-links.mostrar-menu {
-        display: flex;
+    .nav-links a {
+        font-size: 18px; /* Un poco más grande para mobile */
+        padding: 10px 15px;
+        width: 100%;
+        text-align: center;
     }
 
     .menu-boton {
@@ -404,20 +467,155 @@ model-viewer:active {
         display: block;
     }
 
+    .banner {
+        height: 300px;
+        object-fit: cover;
+    }
+
     .Home {
         flex-direction: column;
+        margin: 15px;
+        gap: 20px;
     }
 
-    .servicios-contenedor, .about_us_contenedor, .contactenos {
+    .card,
+    .card-blue {
+        width: 100%;
+    }
+
+    .card-blue {
+        min-height: 350px;
+    }
+
+    model-viewer {
+        height: 300px;
+    }
+
+    .servicios h1 {
+        font-size: 38px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .servicios-contenedor {
         flex-direction: column;
+        padding: 0 15px;
     }
 
-    .servicio-texto, .servicio-imagen, .about_us_imagen, .about_us_text {
+    .servicio-texto,
+    .servicio-imagen {
         width: 100%;
     }
 
+    .servicio-imagen img {
+        height: 300px;
+    }
+
+    .servicio-manipulacion h2,
+    .servicio-carga h2,
+    .servicio-distribucion h2,
+    .servicio-express h2 {
+        margin-left: 0;
+        font-size: 26px;
+        padding: 18px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .servicio-manipulacion p,
+    .servicio-carga p,
+    .servicio-distribucion p,
+    .servicio-express p {
+        margin-left: 0;
+        font-size: 16px;
+        padding: 18px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .about_us_contenedor {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about_us_imagen,
+    .about_us_text {
+        width: 100%;
+    }
+
+    .about_us_imagen img {
+        margin-left: 0;
+        height: 320px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
     .contact-info {
-        grid-template-columns: 1fr;
-        width: 100%;
+        padding: 20px;
     }
+
+    .contact-item {
+        width: 100%;
+        margin-right: 0;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .contact-item p {
+        font-size: 15px;
+        margin: 0;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-item svg,
+    .contact-item i {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .banner {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .banner img,
+    img.banner {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+/***** End RESPONSIVE *****/
+
+/** EFECTO DESPLEGABLE EN HOME ***/
+
+.Home {
+    align-items: flex-start;
+}
+.card, .card-blue {
+    overflow: hidden; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .card-blue:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 15px 15px 25px;
+}
+.contenido-desplegable {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
+}
+.inner-content {
+    overflow: hidden;
+}
+.card:hover .contenido-desplegable,
+.card-blue:hover .contenido-desplegable {
+    grid-template-rows: 1fr;
+}
+
+.card-blue .inner-content {
+    padding-bottom: 15px;
 }
