@@ -5,18 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Abrir y cerrar el menú Celular
     menuBoton.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("mostrar-menu");
-        
-        // Mejora de accesibilidad: indica si el menú está abierto o cerrado
-        menuBoton.setAttribute("aria-expanded", isOpen);
+        navLinks.classList.toggle("mostrar-menu");
     });
 
-    // Cerrar el menú automáticamente al hacer clic en un enlace
+    // Cerrar el menú automáticamente
     links.forEach(link => {
         link.addEventListener("click", () => {
             if (navLinks.classList.contains("mostrar-menu")) {
                 navLinks.classList.remove("mostrar-menu");
-                menuBoton.setAttribute("aria-expanded", "false"); // Resetea el atributo
             }
         });
     });
